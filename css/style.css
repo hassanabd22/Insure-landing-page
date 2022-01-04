@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Violet: hsl(256, 26%, 20%);
+    --Grayish-Blue: hsl(216, 30%, 68%);
+    --Very-Dark-Violet: hsl(270, 9%, 17%);
+    --Dark-Grayish-Violet: hsl(273, 4%, 51%); 
+    --Very-Light-Gray: hsl(0, 0%, 98%)
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+}
+
+.desk {
+    display: none;
+}
+
+.pat {
+    display: none;
+}
+
+
+header {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.head {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw;
+    height: 100%;
+}
+
+.links {
+    display: none;
+    list-style: none;
+    background-color: hsl(256, 26%, 20%);
+    z-index: 10;
+    width: 100vw;
+    height: 451px;
+    padding-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 16 #ddd;
+    background-image: url(../images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.links li {
+    padding: 15px;
+}
+.links li a{
+    text-decoration: none;
+    color: white;
+}
+
+.show-links {
+    display: block;
+}
+
+.btn {
+    border: 1px solid white;
+    padding: 10px 100px;
+    color: white;
+    text-decoration: none;
+}
+
+/* start intro */
+
+.intro {
+    position: relative;
+}
+.intro .img{
+    height: 451px;
+}
+
+.intro .text {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--Dark-Violet);
+    color: var(--Grayish-Blue);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.intro .text h1{
+    font-size: 40px;
+    text-align: center;
+    width: 90vw;
+    margin-bottom: 25px;
+}
+
+.intro .text p{
+    font-size: 14px;
+    text-align: center;
+    width: 90vw;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.intro .bat {
+    position: absolute;
+    top: 70%;
+    right: 0;
+}
+
+.one {
+    padding: 100px 5vw;
+    text-align: center;
+}
+
+.one .box{
+    margin-top: 50px;
+}
+
+.one .box p{
+    line-height: 1.6;
+}
+
+.one .box h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.two {
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.two .work{
+    width: 90vw;
+    background-color: var(--Dark-Violet);
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.two .work h2{
+  margin-bottom: 30px;
+  font-size: 32px;
+  width: 90%;
+}
+
+.two .work .btn{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+
+footer {
+    text-align: center;
+    background-image: url(../images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+
+}
+
+footer ul {
+    padding: 15px;
+    list-style: none;
+}
+
+footer li {
+    padding: 10px;
+}
+
+footer .line {
+    height: 2px;
+    width: 90vw;
+    background-color: #ddd;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width:800px) {
+    .head .togle {
+       display: none;
+    }
+    .head {
+        width: 30%;
+    }
+    .links {
+        display: flex;
+        width: 60%;
+        padding: 0;
+        color: white;
+        justify-content: end;
+        height: 100%;
+        align-items: center;
+        background-color: transparent;
+        z-index: 1;
+        background-image: none;
+    }
+
+    .links li {
+        margin-left: 50px;
+    }
+
+    .links li a{
+        color: hsl(230, 29%, 20%);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .btn {
+        border: 1px solid hsl(256, 26%, 20%);
+        padding: 8px 20px;
+    }
+
+    .intro .img{
+        position: absolute;
+        z-index: 100;
+        right: 10vw;
+        top: 15vh;
+        height: 80vh;
+    }
+    .intro .img img{
+        height: 80vh;
+    }
+
+    .intro .text {
+        align-items: flex-start;
+        background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+        background-position-x: right;
+        padding: 100px 5vw;
+        position: relative;
+        height: 80vh;
+    }
+    .intro .text h1{
+        font-size: 42px;
+        width: 40vw;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .intro .text p{
+        width: 30vw;
+        text-align: left;
+        margin-bottom: 0;
+
+    }
+
+    .intro .text .btn{
+        border: 1px solid white;
+        padding: 10px 100px;
+        color: white;
+        text-decoration: none;
+
+    }
+    
+    .intro .bat {
+        position: absolute;
+        top: 70%;
+        right: 0;
+        display: none;
+    }
+
+    .mob {
+        display: none;
+    }
+    .pat {
+        position: absolute;
+        left: 0;
+        top: 55%;
+        display: block;
+    }
+
+    .desk {
+        display: block;
+    }
+
+    .one  {
+        padding-top: 20vh;
+        text-align: left;
+    }
+
+    .boses {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: 380px;
+    }
+
+    .two .work{
+        flex-direction: row;
+        background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+        justify-content: space-around;
+    }
+    
+    .two .work h2{
+      margin-bottom: 0;
+      font-size: 42px;
+      width: 40%;
+    }
+    
+    .two .work .btn{
+        border: 1px solid white;
+        padding: 10px 40px;
+        color: white;
+        text-decoration: none;
+        z-index: 10;
+     }
+
+     footer {
+         padding-left: 5vw;
+         padding-right: 5vw;
+         background-image: url(../images/bg-pattern-footer-desktop.svg);
+     }
+
+     .flex {
+         display: flex;
+         justify-content: space-between;
+     }
+}
